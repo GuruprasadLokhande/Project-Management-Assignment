@@ -1,10 +1,16 @@
+import Board from './components/Board';
+
 function App() {
   return (
-    <div className="h-screen flex flex-col items-center justify-center bg-gray-900 text-white text-center">
-      <div className="text-5xl font-bold mb-4">React App</div>
-      <div className="text-2xl font-medium">
-        Project Management Assignment Setup
-      </div>
+    <div className="min-h-screen bg-gradient-to-r from-blue-500 to-indigo-600">
+      <header className="bg-white shadow">
+        <div className="max-w-7xl mx-auto py-4 px-6">
+          <h1 className="text-2xl font-bold text-gray-900">Project Management Board</h1>
+        </div>
+      </header>
+      <main>
+        <Board />
+      </main>
     </div>
   );
 }
