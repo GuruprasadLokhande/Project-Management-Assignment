@@ -12,7 +12,7 @@ const AddList = ({ onAddList }) => {
     register,
     handleSubmit,
     reset,
-    formState: { errors }
+    formState: { errors },
   } = useForm({ resolver: zodResolver(listSchema) });
 
   const onSubmit = (data) => {
@@ -28,10 +28,11 @@ const AddList = ({ onAddList }) => {
   };
 
   return (
-    <>
+    <div className="relative w-full">
+      {/* Button at top-right */}
       <button
         onClick={() => setIsOpen(true)}
-        className="flex-shrink-0 w-72 bg-blue-50 rounded-lg p-4 hover:bg-blue-100 text-blue-600 font-medium"
+        className="absolute top-4 right-4 flex-shrink-0 w-40 bg-blue-50 rounded-lg p-3 hover:bg-blue-100 text-blue-600 font-medium shadow-md"
       >
         + Add List
       </button>
@@ -54,7 +55,9 @@ const AddList = ({ onAddList }) => {
               placeholder="Enter list title"
             />
             {errors.title && (
-              <p id="list-title-error" className="mt-1 text-sm text-red-600">{errors.title?.message}</p>
+              <p id="list-title-error" className="mt-1 text-sm text-red-600">
+                {errors.title?.message}
+              </p>
             )}
           </div>
 
@@ -75,7 +78,7 @@ const AddList = ({ onAddList }) => {
           </div>
         </form>
       </Modal>
-    </>
+    </div>
   );
 };
 

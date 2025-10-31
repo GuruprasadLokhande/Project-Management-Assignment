@@ -31,9 +31,9 @@ const AddCard = ({ onAdd }) => {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="w-full mt-3 p-2 text-blue-600 hover:bg-blue-50 rounded text-sm font-medium"
+        className="w-full mt-3 p-2 text-blue-600 hover:bg-blue-50 rounded text-xl font-medium"
       >
-        + Add Card
+        +
       </button>
 
       <Modal isOpen={isOpen} onClose={handleClose} title="Add New Card">
