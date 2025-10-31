@@ -25,24 +25,29 @@ const List = ({ list, onDeleteList, onAddCard, onDeleteCard, onMoveCard }) => {
 
   return (
     <div
-      className={`flex-shrink-0 w-72 bg-gray-200 rounded-lg p-4 ${
-        isDragOver ? 'bg-gray-300' : ''
+      className={`flex-shrink-0  h-[500px] mt-3 w-72 bg-gray-100 rounded-lg p-4 ${
+        isDragOver ? 'ring-2 ring-blue-500' : ''
       }`}
       onDragOver={handleDragOver}
       onDragLeave={handleDragLeave}
       onDrop={handleDrop}
     >
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-lg font-semibold">{list.title}</h2>
+        <div className="flex items-center space-x-2">
+          <h2 className="text-lg font-semibold text-gray-900">{list.title}</h2>
+          <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-blue-600 bg-blue-100 rounded-full">
+            {list.cards.length}
+          </span>
+        </div>
         <button
           onClick={() => onDeleteList(list.id)}
-          className="text-gray-500 hover:text-red-500"
+          className="text-gray-500 hover:text-blue-500"
         >
           ✕
         </button>
       </div>
 
-      <div className="space-y-2">
+      <div className="space-y-2 mt-5">
         {list.cards.map(card => (
           <Card
             key={card.id}

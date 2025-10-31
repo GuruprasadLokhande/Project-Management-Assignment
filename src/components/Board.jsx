@@ -62,7 +62,6 @@ const Board = () => {
       }
       if (list.id === toListId) {
         const updatedCards = [...list.cards, { ...card, createdAt: Date.now() }];
-        // Sort cards in reverse chronological order
         updatedCards.sort((a, b) => b.createdAt - a.createdAt);
         return {
           ...list,

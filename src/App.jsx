@@ -1,15 +1,20 @@
-import Board from './components/Board';
+import Board from "./components/Board";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-blue-500 to-indigo-600">
-      <header className="bg-white shadow">
-        <div className="max-w-7xl mx-auto py-4 px-6">
-          <h1 className="text-2xl font-bold text-gray-900">Project Management Board</h1>
-        </div>
+    <div className="h-screen flex flex-col bg-blue-50 text-gray-900 overflow-hidden">
+      <Toaster position="top-right" />
+      <header className="bg-white shadow-sm w-full text-center py-4">
+        <h1 className="text-3xl font-bold tracking-wide text-blue-800">
+          Project Management Board
+        </h1>
       </header>
-      <main>
-        <Board />
+
+      <main className="flex-grow flex items-center justify-center  w-full">
+        <div className="w-full bg-white">
+          <Board />
+        </div>
       </main>
     </div>
   );

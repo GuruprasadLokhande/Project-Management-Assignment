@@ -8,8 +8,7 @@ const Card = ({ card, listId, onDelete }) => {
 
   const handleDragEnd = (e) => {
     if (e.dataTransfer.dropEffect === 'none') {
-      // Card was dropped outside a valid drop target
-      // No action needed as the card will stay in its original position
+      
     }
   };
 
@@ -20,11 +19,11 @@ const Card = ({ card, listId, onDelete }) => {
       onDragEnd={handleDragEnd}
       className="bg-white rounded p-3 shadow cursor-move"
     >
-      <div className="flex justify-between items-start">
-        <h3 className="font-medium">{card.title}</h3>
+      <div className="flex justify-between text-gray-800 items-start">
+        <h3 className="font-medium text-gray-900">{card.title}</h3>
         <button
           onClick={onDelete}
-          className="text-gray-400 hover:text-red-500 text-sm"
+          className="text-gray-400 hover:text-blue-500 text-sm"
         >
           ✕
         </button>
