@@ -32,7 +32,7 @@ This project was developed and tested on Windows with PowerShell as the default 
 
 ## Install
 
-From the project root (`d:\Vetty Assignment\ProjectManagementTodo`) run:
+From the project root run:
 
 ```powershell
 npm install
